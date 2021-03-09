@@ -1,0 +1,39 @@
+{
+    "name": "cosnavel/laravel-unsplash",
+    "description": "Unsplash API wrapper for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Niclas Kahlmeier",
+			"email": "coding@niclaskahlmeier.de"
+        }
+    ],
+    "require": {
+      "php": "^7.3|^8.0",
+      "guzzlehttp/guzzle": ">=6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cosnavel\\LaravelUnsplash\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+              "Cosnavel\\LaravelUnsplash\\Providers\\UnsplashServiceProvider",
+              "Cosnavel\\LaravelUnsplash\\Providers\\UnsplashUsersServiceProvider",
+              "Cosnavel\\LaravelUnsplash\\Providers\\UnsplashPhotosServiceProvider",
+              "Cosnavel\\LaravelUnsplash\\Providers\\UnsplashCollectionsServiceProvider",
+              "Cosnavel\\LaravelUnsplash\\Providers\\UnsplashSearchServiceProvider"
+            ],
+            "aliases": {
+                "UnsplashSearch": "Cosnavel\\LaravelUnsplash\\Facades\\UnsplashSearch",
+                "UnsplashUsers": "Cosnavel\\LaravelUnsplash\\Facades\\UnsplashUsers",
+                "UnsplashPhotos": "Cosnavel\\LaravelUnsplash\\Facades\\UnsplashPhotos",
+                "UnsplashCollections":  "Cosnavel\\LaravelUnsplash\\Facades\\UnsplashCollections"
+
+            }
+        }
+    }
+}
